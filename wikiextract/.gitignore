@@ -40,9 +40,9 @@ nosetests.xml
 coverage.xml
 
 
-# extracted
-# hindi-pos-tagger-3.0/
-# hindi.output
-# hiwiki.augmented.edits
+extracted
+hindi-pos-tagger-3.0/
+hindi.output
+hiwiki.augmented.edits
 hiwiki-20200501-pages-meta-current.xml
 hiwiki-pages-meta-current.xml
