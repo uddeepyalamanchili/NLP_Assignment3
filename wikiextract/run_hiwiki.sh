@@ -18,7 +18,7 @@ get_seeded_random()
 }
 
 
-EXTRACT_TEXT='python3 WikiExtractor.py --quiet --no_templates --filter_disambig_pages   --min_text_length 20   $HIWIKI_FILE -b 5G -o -'
+EXTRACT_TEXT='python2 WikiExtractor.py --quiet --no_templates --filter_disambig_pages   --min_text_length 20   $HIWIKI_FILE -b 5G -o -'
 TOKENIZE_SENTENCE='python3 indic_sentence_tokenizer.py'
 SELECT_RANDOM_SENTENCE='shuf -n $OUTPUT_SENT --random-source=<(get_seeded_random $SEED)'
 INSERT_ERRORS='python3 insert_errors.py hindi.output  --single --edits'
