@@ -5,3 +5,4 @@ train=int(total_edits*.8)*3
 val = total - train 
 tmp3=train+val
 print(train,val)
+print('tmp3 ', tmp3)
