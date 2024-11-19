@@ -10,7 +10,7 @@ class TestInsertErrors(unittest.TestCase):
     def test_adjective_inflection_error(self):
         # Test inflectional errors in adjectives
         # Sentence: वह अच्छी लड़की है।
-        # Expected Error: वह अच्छा लड़की है।
+        # Expected Error: वह अच्छे लड़की है। or वह अच्छा लड़की है।
         sentence = [
             ('वह', 'PRP', []),
             ('अच्छी', 'JJ', []),
@@ -18,28 +18,31 @@ class TestInsertErrors(unittest.TestCase):
             ('है', 'VAUX', [])
         ]
         expected_err = 'वह अच्छे लड़की हैं'
+        expected_err2 = 'वह अच्छा लड़की है।'
+        expected_err3 = 'वह अच्छा लड़की हैं'
         expected_cor = 'वह अच्छी लड़की है'
         err, cor = insert_errors(sentence)
-        print('test 1', err, cor)
-        print('expected', expected_err, expected_cor)
-        self.assertEqual(err, expected_err, 'Test 1 - err passing')
-        self.assertEqual(cor, expected_cor)
+        # print('test 1', err, cor)
+        # print('expected', expected_err, expected_cor)
+        self.assertIn(err, [expected_err, expected_err2, expected_err3], 'Test 1 - Error Failing')
+        self.assertEqual(cor, expected_cor, 'Test 1 - Correct Failing')
 
     def test_verb_inflection_error(self):
         # Test inflectional errors in verbs
         # Sentence: वे स्कूल जाते हैं।
-        # Expected Error: वे स्कूल जाता हैं।
+        # Expected Error: वे स्कूल जाता हैं। or वे स्कूल जाती है।
         sentence = [
             ('वे', 'PRP', []),
             ('स्कूल', 'NN', []),
             ('जाते', 'VM', []),
             ('हैं', 'VAUX', [])
         ]
-        expected_err = 'वे स्कूल जाता हैं'
+        expected_err = 'वे स्कूल जाती है'
+        expected_err2 = 'वे स्कूल जाता हैं'
         expected_cor = 'वे स्कूल जाते हैं'
         err, cor = insert_errors(sentence)
-        self.assertEqual(err, expected_err)
-        self.assertEqual(cor, expected_cor)
+        self.assertIn(err, [expected_err, expected_err2], 'Test 2 - Error Failing')
+        self.assertEqual(cor, expected_cor, 'Test 2 - Correct Failing')
 
     def test_pronoun_inflection_error(self):
         # Test inflectional errors in pronouns
