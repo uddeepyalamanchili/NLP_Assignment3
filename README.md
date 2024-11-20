@@ -91,3 +91,32 @@ Copy code
 wc data/*
 mv data ../data
 ```
+
+Wiki Edits 2.0
+==============
+
+A collection of scripts for automatic extraction of edited sentences from text
+edition histories, such as Wikipedia revisions.
+
+This repository contains a Jupyter Notebook titled wikiedits.ipynb. The notebook analyzes Wikipedia edits, including data exploration and visualization to identify key editing patterns.
+
+Requirements:
+1. Python 3.x
+2. Jupyter Notebook
+3. Python libraries listed in the notebook (e.g., pandas, matplotlib, etc.)
+
+Install the necessary libraries using:
+`pip install -r requirements.txt`
+
+Usage:
+
+1. Clone this repository:
+`git clone https://github.com/yourusername/wikiedits.git`
+
+2. Navigate to the directory:
+`cd wikiedits`
+
+3. Start Jupyter Notebook:
+`jupyter notebook wikiedits.ipynb`
+
+4. Open the notebook and execute the cells.
