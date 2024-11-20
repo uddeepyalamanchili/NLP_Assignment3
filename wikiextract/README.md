@@ -20,3 +20,31 @@ We do not consider spelling errors to be grammatical errors and as such avoid ge
 
 The ouput of `run_hiwiki.sh` is a file `hiwiki.augmented.edits` which contains the parallel corpus of hindi errors in the .edits format. You can convert it to whatever format you like using the tools in `scripts/`.
 
+Wiki Edits 2.0
+==============
+
+A collection of scripts for automatic extraction of edited sentences from text
+edition histories, such as Wikipedia revisions.
+
+This repository contains a Jupyter Notebook titled wikiedits.ipynb. The notebook analyzes Wikipedia edits, including data exploration and visualization to identify key editing patterns.
+
+Requirements:
+1. Python 3.x
+2. Jupyter Notebook
+3. Python libraries listed in the notebook (e.g., pandas, matplotlib, etc.)
+
+Install the necessary libraries using:
+`pip install -r requirements.txt`
+
+Usage:
+
+1. Clone this repository:
+`git clone https://github.com/yourusername/wikiedits.git`
+
+2. Navigate to the directory:
+`cd wikiedits`
+
+3. Start Jupyter Notebook:
+`jupyter notebook wikiedits.ipynb`
+
+4. Open the notebook and execute the cells.
